@@ -1,0 +1,22 @@
+
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo "Installing project dependencies..."
+
+  build:
+    commands:
+      - echo "Building website..."
+      - bash scripts/test.sh
+
+  post_build:
+    commands:
+      - echo "Website build completed successfully!"
+
+artifacts:
+  files:
+    - index.html
+    - app/**/*
+    - LICENSE
